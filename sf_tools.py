@@ -6,8 +6,10 @@ from varian_utils.mystyle import mystyle
 from varian_utils.my_logging import logger
 import pdb
 
+user = None
 
 def sf_login(development):
+    global user
     sf = None
     if development:
         user_var = 'SFQA3_USER'
