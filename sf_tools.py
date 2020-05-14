@@ -9,10 +9,10 @@ import logging
 user = None
 logger = get_logger('main')
 
-def sf_login(development):
+def sf_login(sandbox):
     global user
     sf = None
-    if development:
+    if sandbox:
         user_var = 'SFQA3_USER'
         user_pass = 'SFQA3_PASS'
         user_token = 'SFQA3_TOKEN'
@@ -42,7 +42,7 @@ def sf_login(development):
         input("Press enter to exit")
         sys.exit()
     try:
-        if development:
+        if sandbox:
             sf = Salesforce(username = user, password = password, security_token = token, domain='test')
         else:
             sf = Salesforce(username = user, password = password, security_token = token)

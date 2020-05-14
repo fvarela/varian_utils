@@ -4,7 +4,7 @@ import pdb
 def get_logger(name):
     return logging.getLogger(name)
 
-def config_logger(name, debug):
+def config_logger(name, debug = True):
     logger = logging.getLogger(name)
 
     if debug:
@@ -25,6 +25,7 @@ def config_logger(name, debug):
     logger.addHandler(stream_handler)
     return logger
 
+config_logger('main')
 
 # #logger = get_logger()
 # # def config_logger(debug):
