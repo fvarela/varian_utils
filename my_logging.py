@@ -1,31 +1,36 @@
 import logging
 import pdb
 
-def get_logger(name):
-    return logging.getLogger(name)
+class Logger:
+    def __init__(self, name='main', debug=True):
+        self.logger = logging.getLogger(name)
+        self.config_logger(name=name, debug=debug)
 
-def config_logger(name, debug = True):
-    logger = logging.getLogger(name)
+    def get_logger(self):
+        return self.logger
+    # def get_logger(self, name):
+    #     return logging.getLogger(name)
 
-    if debug:
-        logger.setLevel(logging.DEBUG)
-    else:
-        logger.setLevel(logging.INFO)
+    def config_logger(self, name, debug = True):
+        if debug:
+            self.logger.setLevel(logging.DEBUG)
+        else:
+            self.logger.setLevel(logging.INFO)
 
-    formatter = logging.Formatter('%(asctime)s:%(levelname)s:%(message)s')
-    stream_format = logging.Formatter('%(message)s')
+        #formatter = logging.Formatter('%(asctime)s:%(levelname)s:%(message)s')
+        stream_format = logging.Formatter('%(message)s')
 
-    #file_handler = logging.FileHandler('timesheet_automation.log')
-    stream_handler = logging.StreamHandler()
-    stream_handler.terminator = ""
+        #file_handler = logging.FileHandler('timesheet_automation.log')
+        stream_handler = logging.StreamHandler()
+        stream_handler.terminator = ""
 
-    #file_handler.setFormatter(formatter)
-    stream_handler.setFormatter(stream_format)
-    #logger.addHandler(file_handler)
-    logger.addHandler(stream_handler)
-    return logger
+        #file_handler.setFormatter(formatter)
+        stream_handler.setFormatter(stream_format)
+        #self.logger.addHandler(file_handler)
+        self.logger.addHandler(stream_handler)
+        return self.logger
 
-config_logger('main')
+    
 
 # #logger = get_logger()
 # # def config_logger(debug):
