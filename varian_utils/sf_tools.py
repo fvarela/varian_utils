@@ -3,11 +3,12 @@ import sys
 import os
 #from varian_utils import my_logging
 from varian_utils.mystyle import mystyle
-from varian_utils.my_logging import get_logger
+from varian_utils.my_logging import Logger
 import pdb
 import logging
 user = None
-logger = get_logger('main')
+my_logger = Logger()
+logger = my_logger.get_logger()
 
 def sf_login(sandbox):
     global user
