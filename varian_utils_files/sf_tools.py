@@ -2,8 +2,8 @@ from simple_salesforce import Salesforce, SalesforceAuthenticationFailed, Salesf
 import sys
 import os
 #from varian_utils import my_logging
-from varian_utils.mystyle import mystyle
-from varian_utils.my_logging import Logger
+from .mystyle import mystyle
+from .my_logging import Logger
 import pdb
 import logging
 user = None
