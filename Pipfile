@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 simple-salesforce = "*"
 colorama = "*"
+terminaltables = "*"
 
 [requires]
 python_version = "3.9"
