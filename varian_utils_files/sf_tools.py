@@ -7,8 +7,7 @@ from .my_logging import Logger
 import pdb
 import logging
 user = None
-my_logger = Logger()
-logger = my_logger.get_logger()
+logger = Logger().get_logger()
 
 def sf_login(sandbox):
     global user
