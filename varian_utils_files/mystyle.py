@@ -1,3 +1,8 @@
+#USAGE:
+# from varian_utils.mystyle import mystyle, styles_overview
+#
+# print(f"Testing {mystyle.bright}bright{mystyle.done} text output"")
+
 from colorama import init, Fore, Style
 class mystyle:
     good = Fore.GREEN + Style.BRIGHT
