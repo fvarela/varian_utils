@@ -1,8 +1,12 @@
 import logging
-import pdb
-# import constants 
 import datetime
 from .mystyle import mystyle
+
+#USAGE:
+#  from varian_utils.varian_utils_files.my_logging import Logger                #Add this line in every file
+#  logger = Logger().get_logger()                                               #Add this line in every file
+#  Logger().config_logger(file_path='your_log_file_path.log', debug=False)      #Run this line only once in the script!!
+#  Logger.file_path = 'your_log_file_path.log'                                  #Run this line only once in the script!!
 
 class Logger:
     file_path=None
