@@ -4,6 +4,9 @@
 # print(f"Testing {mystyle.bright}bright{mystyle.done} text output"")
 
 from colorama import init, Fore, Style
+
+
+
 class mystyle:
     good = Fore.GREEN + Style.BRIGHT
     bad = Fore.RED + Style.BRIGHT

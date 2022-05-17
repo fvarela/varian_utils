@@ -9,6 +9,10 @@ verify_ssl = true
 simple-salesforce = "*"
 colorama = "*"
 terminaltables = "*"
+pretty-errors = "*"
+pyreadline = "*"
+rich = "*"
+typer = "*"
 
 [requires]
 python_version = "3.9"
